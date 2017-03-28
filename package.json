@@ -30,7 +30,9 @@
       "es6-promise": "npm:es6-promise@^4.1.0",
       "es6-shim": "npm:es6-shim@^0.35.3",
       "es7-reflect-metadata": "npm:es7-reflect-metadata@^1.6.0",
+      "plugin-babel": "npm:systemjs-plugin-babel@^0.0.21",
       "reflect-metadata": "npm:reflect-metadata@^0.1.10",
+      "requirejs": "npm:requirejs@^2.3.3",
       "rxjs": "npm:rxjs@^5.2.0",
       "zone.js": "npm:zone.js@^0.8.5"
     },

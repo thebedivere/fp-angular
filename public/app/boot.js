@@ -5,9 +5,11 @@ import 'reflect-metadata'
 import 'zone.js'
 
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
-import './app.module'
+import { AppModule } from './app.module'
 
-( function ( app ) {
-  platformBrowserDynamic().bootstrapModule( app.AppModule )
-} )( window.app || ( window.app = {} ) )
+
+let boot = platformBrowserDynamic().bootstrapModule( AppModule )
+
+export { boot }
+
 

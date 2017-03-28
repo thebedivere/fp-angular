@@ -1,14 +1,17 @@
 import { Component } from '@angular/core'
+import { appService } from './app.service'
 
-( function ( app ) {
-    app.AppComponent = Component( {
+let AppComponent =
+    Component( {
         selector: 'my-app',
-        template: '<h1>Hello Angular</h1>'
+        template: '<h1>{{ x }}</h1>',
+        providers: [ appService ]
     } )
         .Class( {
-            constructor: function () { }
+            constructor: [ appService, function ( appservice ) {
+                AppComponent.prototype.x = appservice.thing( 'hello world' )
+
+            } ]
         } )
 
-} )( window.app || ( window.app = {} ) )
-
-
+export { AppComponent }

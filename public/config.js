@@ -12,7 +12,6 @@ System.config({
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
-
   map: {
     "@angular/common": "npm:@angular/common@4.0.0",
     "@angular/compiler": "npm:@angular/compiler@4.0.0",
@@ -27,7 +26,9 @@ System.config({
     "es6-promise": "npm:es6-promise@4.1.0",
     "es6-shim": "npm:es6-shim@0.35.3",
     "es7-reflect-metadata": "npm:es7-reflect-metadata@1.6.0",
+    "plugin-babel": "npm:systemjs-plugin-babel@0.0.21",
     "reflect-metadata": "npm:reflect-metadata@0.1.10",
+    "requirejs": "npm:requirejs@2.3.3",
     "rxjs": "npm:rxjs@5.2.0",
     "zone.js": "npm:zone.js@0.8.5",
     "github:jspm/nodelibs-assert@0.1.0": {
@@ -351,6 +352,13 @@ System.config({
     "npm:regenerator-runtime@0.10.3": {
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:requirejs@2.3.3": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "vm": "github:jspm/nodelibs-vm@0.1.0"
     },
     "npm:ripemd160@1.0.1": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",

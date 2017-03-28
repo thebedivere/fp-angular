@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
-import './app.component'
+import { AppComponent } from './app.component'
 
 
-( function ( app ) {
-    app.AppModule = NgModule( {
+
+let AppModule = NgModule( {
         imports: [ BrowserModule ],
-        declarations: [ app.AppComponent ],
-        bootstrap: [ app.AppComponent ]
+        declarations: [ AppComponent ],
+        bootstrap: [ AppComponent ]
     } )
         .Class( {
             constructor: function () { }
         } )
-} )( window.app || ( window.app = {} ) )
+
+export { AppModule }
 
 
