@@ -1,17 +1,18 @@
+import { AppService } from './app.service'
 import { Component } from '@angular/core'
-import { appService } from './app.service'
 
-let AppComponent =
+export const AppComponent =
     Component( {
         selector: 'my-app',
-        template: '<h1>{{ x }}</h1>',
-        providers: [ appService ]
+        template: '<h1>{{ x }} {{ y }}</h1>',
+        providers: [ AppService ]
     } )
         .Class( {
-            constructor: [ appService, function ( appservice ) {
-                AppComponent.prototype.x = appservice.thing( 'hello world' )
-
-            } ]
+            constructor( appService ) {
+                this.x = appService.thing( 'HI Josh' )
+            }
         } )
 
-export { AppComponent }
+AppComponent.parameters = [ [ AppService ] ]
+
+export let __hotReload = true

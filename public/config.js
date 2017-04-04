@@ -1,4 +1,4 @@
-System.config({
+System.config( {
   baseURL: "/",
   defaultJSExtensions: true,
   transpiler: "babel",
@@ -10,8 +10,15 @@ System.config({
   },
   paths: {
     "github:*": "jspm_packages/github/*",
-    "npm:*": "jspm_packages/npm/*"
+    "npm:*": "jspm_packages/npm/*",
+    'plugin-babel': 'node_modules/systemjs-plugin-babel/plugin-babel.js',
+    'systemjs-babel-build': 'node_modules/systemjs-plugin-babel/systemjs-babel-browser.js',
+    'systemjs': 'node_modules/systemjs/dist/system.js',
+    'system-polyfills': 'node_modules/systemjs/dist/system-polyfills.js',
+    'es6-module-loader': 'node_modules/es6-module-loader/dist/es6-module-loader.js'
   },
+  trace: true,
+
   map: {
     "@angular/common": "npm:@angular/common@4.0.0",
     "@angular/compiler": "npm:@angular/compiler@4.0.0",
@@ -19,6 +26,7 @@ System.config({
     "@angular/platform-browser": "npm:@angular/platform-browser@4.0.0",
     "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@4.0.0",
     "@angular/router": "npm:@angular/router@4.0.0",
+    "@hot": "@empty",
     "babel": "npm:babel-core@5.8.38",
     "babel-polyfill": "npm:babel-polyfill@6.23.0",
     "babel-runtime": "npm:babel-runtime@5.8.38",
@@ -30,6 +38,7 @@ System.config({
     "reflect-metadata": "npm:reflect-metadata@0.1.10",
     "requirejs": "npm:requirejs@2.3.3",
     "rxjs": "npm:rxjs@5.2.0",
+    "systemjs-hot-reloader": "npm:systemjs-hot-reloader@1.1.0",
     "zone.js": "npm:zone.js@0.8.5",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
@@ -383,6 +392,9 @@ System.config({
     "npm:string_decoder@0.10.31": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
     },
+    "npm:systemjs-hot-reloader@1.1.0": {
+      "systemjs-hmr": "npm:systemjs-hmr@2.0.9"
+    },
     "npm:timers-browserify@1.4.2": {
       "process": "npm:process@0.11.9"
     },
@@ -401,4 +413,4 @@ System.config({
       "timers": "github:jspm/nodelibs-timers@0.1.0"
     }
   }
-});
+} );

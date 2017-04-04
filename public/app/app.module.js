@@ -1,8 +1,6 @@
-import { NgModule } from '@angular/core'
-import { BrowserModule } from '@angular/platform-browser'
 import { AppComponent } from './app.component'
-
-
+import { BrowserModule } from '@angular/platform-browser'
+import { NgModule } from '@angular/core'
 
 let AppModule = NgModule( {
         imports: [ BrowserModule ],
@@ -15,4 +13,4 @@ let AppModule = NgModule( {
 
 export { AppModule }
 
-
+export let __hotReload = true

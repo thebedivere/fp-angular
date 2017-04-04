@@ -1,7 +1,10 @@
-let appService = class {
-    thing(message){
+export function AppService() {
+    /**
+     * @param {string} message message to return
+     */
+    this.thing = function(message) {
         return message
     }
 }
 
-export { appService }
+export let __hotReload = true

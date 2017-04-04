@@ -4,12 +4,9 @@ import 'es6-promise'
 import 'reflect-metadata'
 import 'zone.js'
 
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
 import { AppModule } from './app.module'
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
 
+export const boot = platformBrowserDynamic().bootstrapModule( AppModule )
 
-let boot = platformBrowserDynamic().bootstrapModule( AppModule )
-
-export { boot }
-
-
+export let __hotReload = true
